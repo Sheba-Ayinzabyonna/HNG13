@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sheba' Profile Card</title>
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+/>
+    <link rel="stylesheet" href="index.css">
+    
+</head>
+<body>
+
+<article class="profile-card" data-testid="test-profile-card">
+  <figure class="profile-card__figure">
+    <img
+      src="./src/She.png"
+      alt="My head shot"
+      data-testid="test-user-avatar"
+      class="profile-card__avatar"
+    />
+  </figure>
+
+  <div class="profile-card__content">
+    <header class="profile-card__header">
+      <h2 data-testid="test-user-name" class="profile-card__name">
+       Sheba Ayinzabyonna
+      </h2>
+      
+    </header>
+
+    <p data-testid="test-user-bio" class="profile-card__bio">
+      A passionate software developer and tech enthusiast with passion to mentor girls and women to acquire practical skills that empower them to become problem solvers. I believe in continuous learning and the power of open source.
+    </p>
+
+    <p class="profile-card__time-info">
+      Current Time (ms): <span data-testid="test-user-time"></span>
+    </p>
+
+    <hr class="profile-card__divider">
+
+    <nav class="profile-card__nav" data-testid="test-user-social-links">
+      <h3 class="profile-card__section-title">Connect</h3>
+      <ul class="profile-card__social-list">
+        <li>
+          <a
+            href="https://x.com/ShebaAyinza"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-testid="test-user-social-twitter"
+           
+          >
+            Twitter
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/sheba-ayinzabyonna/"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-testid="test-user-social-linkedin"
+            
+          >
+            LinkedIn
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://github.com/Sheba-Ayinzabyonna"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-testid="test-user-social-github"
+          
+          >
+            GitHub
+          </a>
+        </li>
+      </ul>
+    </nav>
+    
+    <hr class="profile-card__divider">
+
+    <section class="profile-card__section">
+    
+      <div class="profile-card__lists-container">
+          <div class="profile-card__list-group">
+              <h4 class="profile-card__list-title">Hobbies</h4>
+              <ul data-testid="test-user-hobbies" class="profile-card__list">
+               <i class="fas fa-thumbs-up icon"></i> <li>Reading</li>
+              <i class="fas fa-thumbs-up icon"></i> <li>Baking</li>
+               <i class="fas fa-thumbs-up icon"></i> <li>Mentoring</li>
+                <i class="fas fa-thumbs-up icon"></i><li>Contributing to open source</li>
+              </ul>
+          </div>
+          <div class="profile-card__list-group">
+              <h4 class="profile-card__list-title">Dislikes</h4>
+              <ul data-testid="test-user-dislikes" class="profile-card__list">
+                <i class="fas fa-thumbs-down icon"></i><li>Dishonesty</li>
+                 <i class="fas fa-thumbs-down icon"></i><li>Wasting time</li>
+                 <i class="fas fa-thumbs-down icon"></i><li>Errors in code</li>
+                 <i class="fas fa-thumbs-down icon"></i><li>Long queues</li>
+              </ul>
+          </div>
+      </div>
+    </section>
+  </div>
+</article>
+
+<script src="index.js">
+  
+</script>
+</body>
+</html>

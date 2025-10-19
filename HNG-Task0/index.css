@@ -1,0 +1,203 @@
+/* Base Styling & Dark Theme Setup */
+:root {
+  --color-dark-bg: #121212;
+  --color-card-bg: #1a1a1a;
+  --color-primary-text: #ffffff;
+  --color-secondary-text: #aaaaaa;
+  --color-accent: #00ff99;
+  /* A vibrant green for links/titles */
+  --spacing-unit: 1rem;
+}
+
+body {
+  background-color: var(--color-dark-bg);
+  color: var(--color-primary-text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+/* Profile Card Container */
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  /* Stacked by default for mobile */
+  background-color: var(--color-card-bg);
+  max-width: 1000px;
+  /* width: 100%; */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Avatar Section */
+.profile-card__figure {
+  flex-shrink: 0;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  /* Dark overlay for text readability, similar to the image */
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
+}
+
+.profile-card__avatar {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  /* To mimic the dark, stylized photo in the example */
+  mix-blend-mode: luminosity;
+  filter: contrast(1.1);
+}
+
+/* Content Section (Text) */
+.profile-card__content {
+  padding: 2rem;
+  flex-grow: 1;
+}
+
+.profile-card__header {
+  margin-bottom: 1.5rem;
+}
+
+.profile-card__name {
+  font-size: 2.5rem;
+  margin: 0;
+  font-weight: 700;
+}
+
+.profile-card__title {
+  color: var(--color-accent);
+  font-size: 1.1rem;
+  margin: 0.5rem 0 0 0;
+}
+
+.profile-card__bio {
+  color: var(--color-secondary-text);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.profile-card__time-info {
+  font-size: 0.9rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.profile-card__divider {
+  border: none;
+  height: 1px;
+  background-color: #333;
+  margin: 1.5rem 0;
+}
+
+/*icons*/
+.icon {
+  font-size: 12px;
+}
+/* Social Links & Lists */
+.profile-card__section-title,
+.profile-card__list-title {
+  color: #5ec04b;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.profile-card__social-list,
+.profile-card__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.profile-card__social-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.profile-card__nav a {
+  color: #5ec04b;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border: 1px solid #5ec04b;
+  border-radius: 4px;
+  display: inline-block;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.profile-card__nav a:hover,
+.profile-card__nav a:focus {
+  background-color: #5ec04b;
+  color: white;
+  outline: 2px solid #5ec04b;
+  /* Visible focus style */
+  outline-offset: 2px;
+}
+
+.profile-card__list {
+  color: var(--color-secondary-text);
+  padding-left: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.profile-card__list li {
+  margin-bottom: 0.5rem;
+}
+
+.profile-card__lists-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Tablet and Desktop Layout (Wider Screens) */
+@media (min-width: 768px) {
+  .profile-card {
+    flex-direction: row;
+    /* Horizontal layout */
+  }
+
+  .profile-card__figure {
+    width: 40%;
+    /* Avatar takes 40% of the width */
+    max-height: 100%;
+    /* Ensure the photo looks right in the new aspect ratio */
+    min-height: 400px;
+  }
+
+  .profile-card__avatar {
+    height: 100%;
+    min-height: 400px;
+  }
+
+  .profile-card__content {
+    width: 60%;
+    /* Content takes 60% of the width */
+    padding: 3rem;
+  }
+
+  .profile-card__lists-container {
+    flex-direction: row;
+    /* Hobbies and Dislikes side-by-side */
+    justify-content: space-between;
+  }
+  
+  .profile-card__list-group {
+    flex: 1;
+    min-width: 20%;
+    /* Ensure they don't get too cramped */
+  }
+  .profile-card__list-group li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+}

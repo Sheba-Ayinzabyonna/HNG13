@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <link rel="stylesheet" href="index.css">
+    
+</head>
+<body>
+
+    <article class="profile-card" data-testid="test-profile-card">
+        
+        <div class="profile-content-wrapper">
+            
+            <figure>
+                <img 
+                    src="./src/She.png" 
+                    alt="My head shot" 
+                    data-testid="test-user-avatar"
+                >
+                </figure>
+
+            <div class="profile-info">
+                
+                <header>
+                    <h2 data-testid="test-user-name" aria-label="User's name">
+                        Sheba Ayinzabyonna
+                    </h2>
+                </header>
+
+                <p class="time-display">
+                    Current Time (ms): <span data-testid="test-user-time"></span>
+                </p>
+
+                <p data-testid="test-user-bio">
+                    A passionate software developer and tech enthusiast with passion to mentor girls and women to acquire practical skills that empower them to become problem solvers. I believe in continuous learning and the power of open source.
+                </p>
+
+                <nav class="social-nav" data-testid="test-user-social-links">
+                    <h3>Connect</h3>
+                    <ul>
+                        <li>
+                            <a 
+                                href="https://x.com/ShebaAyinza" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                data-testid="test-user-social-twitter"
+                            >
+                                Twitter
+                            </a>
+                        </li>
+                        <li>
+                            <a 
+                                href="https://www.linkedin.com/in/sheba-ayinzabyonna/" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                data-testid="test-user-social-linkedin"
+                            >
+                                LinkedIn
+                            </a>
+                        </li>
+                        <li>
+                            <a 
+                                href="https://github.com/Sheba-Ayinzabyonna" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                data-testid="test-user-social-github"
+                            >
+                                GitHub
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        
+        <div class="hobbies-dislikes-container">
+            <section>
+                <h3>Hobbies</h3>
+                <ul data-testid="test-user-hobbies">
+                    <li>Playing the piano</li>
+                    <li>Hiking and nature photography</li>
+                    <li>Reading sci-fi novels</li>
+                    <li>Building mechanical keyboards</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Dislikes</h3>
+                <ul data-testid="test-user-dislikes">
+                    <li>Unnecessary complexity</li>
+                    <li>Unstructured data</li>
+                    <li>Slow-loading websites</li>
+                    <li>Loud chewing</li>
+                </ul>
+            </section>
+        </div>
+
+    </article>
+
+    <script src="index.js">
+ 
+    </script>
+</body>
+</html>
