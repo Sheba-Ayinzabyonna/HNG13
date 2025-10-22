@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Me</title>
+    <!-- Load Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body role="document">
+    <main data-testid="test-about-page" class="container">
+      <nav class="navbar" role="navigation" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="./index.html">Home</a></li>
+          <li class="nav-item"><a href="./about-me.html">About Me</a></li>
+          <li class="nav-item"><a href="./contactUs.html">Contact</a></li>
+        </ul>
+      </nav>
+      <!-- Header and Profile Image Section -->
+      <header>
+        <!-- Profile Picture -->
+        <div
+          class="profile-pic"
+          role="img"
+          aria-label="Profile picture placeholder">
+          <img src="./src/She.png" alt="Sheba' profile photo" />
+        </div>
+        <h1>Reflections & Roadmap</h1>
+        <p>A continuous journal of growth, challenge, and commitment.</p>
+      </header>
+
+      <!-- Section 1: Bio -->
+      <section
+        data-testid="test-about-bio"
+        tabindex="0"
+        aria-labelledby="bio-heading">
+        <h2 id="bio-heading">
+          <i data-lucide="smile" class="icon-accent" aria-hidden="true"></i>
+          Bio
+        </h2>
+        <p>
+          Sheba Ayinzabyonna is a Ugandan STEM Educator, Software Developer,
+          UI/UX Designer, and WordPress Developer dedicated to solving
+          real-world problems through technology and community empowerment. Her
+          expertise is centered in Front-End Development, WordPress development,
+          and user-centered UI/UX design, and she applies a strong
+          problem-solving mindset to her work. She holds a bachelor's degree in
+          Information Technology (IT) and has experience as an Information
+          Communications Technology (ICT) teacher.<br />
+
+          A passionate champion for inclusion, Sheba is deeply involved in
+          empowering women and girls in technology. She has successfully trained
+          over 80 women in UI/UX design and front-end development through
+          community-driven workshops and is a Code Queen Facilitator.<br />
+          Her dedication has earned her recognition, including the Outstanding
+          Performance Award at the Women Techmakers Series. Sheba is a highly
+          active member of the tech community, serving as a frequent Speaker,
+          Organizer, Translator, and Volunteer at WordCamp events across Uganda
+          (including Mukono and Masaka in 2025). Her contributions extend to
+          developing community-centered digital solutions, such as an AI-powered
+          agriculture app. She strives to integrate her faith into her work,
+          using technology, education, and community service to serve
+          purposefully.
+        </p>
+      </section>
+
+      <!-- Section 2: Goals in this Program -->
+      <section
+        data-testid="test-about-goals"
+        tabindex="0"
+        aria-labelledby="goals-heading">
+        <h2 id="goals-heading">
+          <i data-lucide="target" class="icon-accent" aria-hidden="true"></i>
+          Program Goals
+        </h2>
+        <ul>
+          <li>
+            Performance & Ecosystem: Moving from a framework user to a framework
+            expert by focusing on speed, state management, and rendering
+            strategy.
+          </li>
+          <li>
+            Collaboration & Standards: Engaging with the wider development
+            community through Open Source to learn professional contribution and
+            best practices.
+          </li>
+          <li>
+            Actively contribute to a major open-source project, moving beyond
+            personal learning and engaging in team collaboration.
+          </li>
+          <li>
+            Product & Design: Owning the User Experience and demonstrating
+            proficiency not just in coding, but in the entire product lifecycle
+            from concept to launch.
+          </li>
+        </ul>
+      </section>
+
+      <!-- Section 3: Areas of Low Confidence -->
+      <section
+        data-testid="test-about-confidence"
+        tabindex="0"
+        aria-labelledby="confidence-heading">
+        <h2 id="confidence-heading">
+          <i
+            data-lucide="heart-crack"
+            class="icon-accent"
+            aria-hidden="true"></i>
+          Areas for Growth
+        </h2>
+        <ul>
+          <li>Deepening Architectural Influence</li>
+          <li>Ensuring Code Quality and Resilience</li>
+          <li>Mastering High-Scale Runtime Performance</li>
+        </ul>
+      </section>
+
+      <!-- Section 4: Note to Future Self -->
+      <section
+        data-testid="test-about-future-note"
+        tabindex="0"
+        aria-labelledby="note-heading">
+        <h2 id="note-heading">
+          <i data-lucide="lightbulb" class="icon-accent" aria-hidden="true"></i>
+          Note to Future Self
+        </h2>
+        <blockquote>
+          "Remember this moment: you're mastering hyper-efficient rendering and
+          client-side caching. This is what separates builders from architects.
+          Don't chase trends; chase performance and stability. Deep competence
+          in the browser runtime and resilient component design is permanent.
+          Always prioritize delivering the fastest, most accessible UX to solve
+          the user's problem. Keep contributing to the Design System, and keep
+          that fire for learning alive.."
+        </blockquote>
+        <!-- <footer class="citation">— Current You</footer> -->
+      </section>
+
+      <!-- Section 5: Extra Thoughts -->
+      <section
+        data-testid="test-about-extra"
+        tabindex="0"
+        aria-labelledby="thoughts-heading">
+        <h2 id="thoughts-heading">
+          <i
+            data-lucide="message-square"
+            class="icon-accent"
+            aria-hidden="true"></i>
+          Extra Thoughts
+        </h2>
+        <p>
+          Extra Thoughts: Beyond the Code <br>1. The Front-End Owns the Full Stack:
+          Your performance mastery (caching, rendering) now dictates the speed
+          of the entire application, often at the Edge. You own the whole
+          delivery pipeline. <br>2. The Power of Unlearning: Be ready to discard old
+          habits that don't scale. Hyper-efficiency often requires a deliberate
+          shift to new, scalable patterns (like immutable state).<br> 3. Mentorship
+          is Mastery: Teaching complex concepts forces you to simplify them,
+          deepening your own understanding. Contribution fuels comprehension.<br> 4.
+          Performance is Profit: Frame optimization work in terms of business
+          value—faster load times mean higher conversion rates and revenue.
+        </p>
+      </section>
+    </main>
+
+    <!-- JavaScript for initializing Lucide icons -->
+    <script src="index.js"></script>
+  </body>
+</html>

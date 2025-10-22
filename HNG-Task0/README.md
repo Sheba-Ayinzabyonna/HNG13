@@ -32,3 +32,5 @@ The component was built specifically to pass a set of checks based on the requir
 | **Hobbies List** | `data-testid="test-user-hobbies"` (on `<ul>`) | Check for semantic `<section>` and `<ul>` structure. |
 | **Dislikes List** | `data-testid="test-user-dislikes"` (on `<ul>`) | Check for semantic `<section>` and `<ul>` structure. |
 | **Responsiveness** | Media Queries/Flexbox | Resize browser window to verify vertical stacking on mobile and side-by-side layout on desktop. |
+
+Added the About Me page and Contact Us page

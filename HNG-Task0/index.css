@@ -27,7 +27,6 @@ body {
   /* Stacked by default for mobile */
   background-color: var(--color-card-bg);
   max-width: 1000px;
-  /* width: 100%; */
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
@@ -157,6 +156,52 @@ body {
   gap: 2rem;
 }
 
+/* --- Navigation Bar Styles --- */
+.navbar {
+  background-color: #222; /* Darker than the content panel */
+  padding: 15px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-list {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  max-width: 1200px;
+}
+
+.nav-item a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  /* font-weight: bold; */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s, background-color 0.3s;
+  border-radius: 5px;
+}
+
+.nav-item a:hover,
+.nav-item a:focus {
+  color: #5ec04b; /* A pop of green, like 'CONNECT' */
+  background-color: #242323;
+  outline: none; /* For accessibility */
+}
+
+.nav-item a.active-nav-item {
+  color: #5ec04b; /* Active text color */
+  background-color: #242323; /* Active background */
+  font-weight: bold; /* Optional: Make it stand out more */
+  border-bottom: 2px solid #5ec04b;
+}
+
+
 /* Tablet and Desktop Layout (Wider Screens) */
 @media (min-width: 768px) {
   .profile-card {
@@ -188,7 +233,7 @@ body {
     /* Hobbies and Dislikes side-by-side */
     justify-content: space-between;
   }
-  
+
   .profile-card__list-group {
     flex: 1;
     min-width: 20%;
@@ -198,8 +243,317 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
-    padding:0;
-    margin-left:-16px
+    padding: 0;
+    margin-left: -16px;
   }
-
 }
+
+/* Navigation Bar Styles */
+@media (max-width: 600px) {
+  .nav-list {
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav-item {
+    margin: 5px 0;
+  }
+  .nav-item a {
+    display: block;
+  }
+}
+
+/* General Styles and Reset */
+/* CSS code for the contactus page  */
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color-dark-bg); /* Dark background */
+    padding: 20px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: var(--color-text-light); /* Default body text color */
+}
+
+/* Form Container */
+.contact-form {
+    max-width: 600px;
+    width: 100%;
+    padding: 40px; /* Increased padding for a substantial look */
+    background: var(--color-form-bg); /* Dark gray container */
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Stronger, darker shadow */
+}
+
+.contact-form h2 {
+    text-align: center;
+    color: #fff; /* White title for high contrast */
+    margin-bottom: 30px;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+/* Form Groups */
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: var(--color-text-light); /* Light label text */
+    cursor: pointer;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 14px;
+    /*border: 1px solid #5ec04b;*//* Darker border */
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: #333; /* Darker input fields */
+    color: #fff; /* White text input */
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--color-accent-green); /* Green focus color */
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.4); 
+    /* Green glow */
+    outline: none;
+}
+
+/* Error Styles */
+.error-message {
+    color: var(--color-error-red);
+    font-size: 0.9em;
+    margin-top: 5px;
+    min-height: 1.4em;
+    padding-left: 2px;
+}
+
+.form-group input.invalid,
+.form-group textarea.invalid {
+    border-color: var(--color-error-red);
+    box-shadow: 0 0 0 1px var(--color-error-red);
+}
+
+/* Success Message */
+.submit-message {
+    /* Updated colors for a green success on a dark background */
+    background-color:#5ec04b; /* Darker green */
+    color: #fff;
+    border: 1px solid var(--color-accent-green);
+    padding: 20px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Submit Button */
+.submit-button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #333; /* Darker input fields */
+    /* Primary green color */
+    color: #fff;/* on green button */
+    outline: 2px solid #5ec04b;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, opacity 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #5ec04b; /* Slightly darker green on hover */
+    opacity: 0.9;
+    color:#fff;
+}
+
+.submit-button:focus {
+    outline:3px solid #5ec04b; /* Lighter green outline for focus */
+    outline-offset: 3px;
+}
+
+/* Utility Classes and Responsiveness remain the same */
+.hidden {
+    display: none !important;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    .contact-form {
+        padding: 20px;
+        margin: 0;
+    }
+}
+
+/*About Me
+  
+        /* Base Colors and Typography */
+        :root {
+            --color-bg-primary: #121212; /* Deep Black */
+            --color-bg-section: #1e1e1e; /* Slightly lighter section background */
+            --color-accent-green:#5ec04b; /* Dark Olive Green from image */
+            --color-text-light: #f3f4f6; /* Near white */
+            --color-text-muted: #9ca3af; /* Gray */
+            --font-family: 'Inter', sans-serif;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap');
+
+        body {
+            font-family: var(--font-family);
+            background-color: var(--color-bg-primary);
+            color: var(--color-text-light);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Container and Main Layout */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        /* Accessibility: Keyboard Navigation */
+        a:focus, button:focus, section[tabindex="0"]:focus {
+            outline: 3px solid var(--color-accent-green);
+            outline-offset: 4px;
+            border-radius: 8px;
+        }
+
+        /* Header Styling */
+        header {
+            text-align: center;
+            padding: 2rem 0 1rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            color: var(--color-text-light);
+        }
+
+        header p {
+            font-size: 1.125rem;
+            color: var(--color-text-muted);
+        }
+
+        /* Profile Image */
+        .profile-pic {
+            width: 128px;
+            height: 128px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid #5ec04b; /* Brighter green ring */
+            margin: 0 auto 1rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        }
+
+        .profile-pic img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Section Styling */
+        section {
+            background-color: var(--color-bg-section);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+            border-top: 5px solid var(--color-accent-green);
+            transition: transform 0.2s;
+        }
+
+        /* Section Hover for visual feedback */
+        section:hover {
+            transform: translateY(-2px);
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            color: var(--color-text-light);
+        }
+
+        .icon-accent {
+            width: 1.5rem;
+            height: 1.5rem;
+            margin-right: 0.75rem;
+            color: #5ec04b; /* Bright green for visibility */
+        }
+
+        /* Content Styling */
+        p, ul {
+            font-size: 1rem;
+            color: var(--color-text-muted);
+        }
+
+        ul {
+            list-style: disc;
+            padding-left: 1.5rem;
+            margin: 0;
+            padding-top: 0.5rem;
+        }
+
+        blockquote {
+            border-left: 4px solid var(--color-accent-green);
+            padding-left: 1rem;
+            font-style: italic;
+            color: var(--color-text-light);
+        }
+
+        /* Footer/Citation */
+        footer.citation {
+            text-align: right;
+            font-size: 0.8rem;
+            color: var(--color-text-muted);
+            margin-top: 0.5rem;
+        }
+
+
+        /* --- Media Queries for Standard Devices --- */
+
+        /* Tablet (e.g., devices wider than 600px) */
+        @media screen and (min-width: 600px) {
+            .container {
+                padding: 2rem;
+            }
+            h1 {
+                font-size: 3rem;
+            }
+            section {
+                padding: 2rem;
+            }
+        }
+
+        /* Desktop (e.g., devices wider than 1024px) - For the main content area */
+        @media screen and (min-width: 1024px) {
+            .container {
+                padding: 3rem 0;
+            }
+            h1 {
+                font-size: 3.5rem;
+            }
+        }
+    
