@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sheba Ticket App (Twig/JS Frontend)</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+
+    <header class="app-header">
+        <h1>Ticket App</h1>
+        <nav>
+            {# These links will be handled by JavaScript to switch views #}
+            <button id="nav-list" data-view="list">List</button> |
+            <button id="nav-new" data-view="new">New Ticket</button>
+        </nav>
+    </header>
+
+    <main class="app-content">
+        {# 
+          All views are rendered here. JavaScript will show only one at a time.
+          The backend provides the initial data (e.g., all tickets) right here. 
+        #}
+        
+        {% block body_list %}{% endblock %}
+        {% block body_new %}{% endblock %}
+        {# We skip the Detail view for simplicity, assuming JS will render it dynamically #}
+        
+    </main>
+    
+    {# 
+      INITIAL DATA INJECTION: 
+      The PHP backend renders the starting ticket data directly into a JSON script tag. 
+      JavaScript then reads this data.
+    #}
+    <script id="initial-data" type="application/json">
+        {{ initial_tickets|json_encode()|raw }}
+    </script>
+
+    {% block javascripts %}
+        <script src="/assets/js/app.js"></script>
+    {% endblock %}
+</body>
+</html>

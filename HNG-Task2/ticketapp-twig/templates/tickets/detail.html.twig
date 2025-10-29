@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ticket #{{ ticket.id }}{% endblock %}
+
+{% block body %}
+    <div class="ticket-detail">
+        <a href="{{ path('ticket_list') }}">← Back to List</a>
+        
+        <h2>Ticket: {{ ticket.title }}</h2>
+        
+        <div class="detail-header">
+            <p>ID: **#{{ ticket.id }}**</p>
+            <p>Status: <span class="status-badge status-{{ ticket.status|lower }}">{{ ticket.status }}</span></p>
+            <p>Created: {{ ticket.createdAt|date('F jS, Y H:i') }}</p>
+        </div>
+
+        <hr>
+
+        <h3>Description</h3>
+        <p class="ticket-description">
+            {{ ticket.description|nl2br }}
+        </p>
+
+        {# You would typically have a section for comments/replies here #}
+        {% if ticket.comments is defined and ticket.comments is not empty %}
+            <div class="ticket-comments">
+                <h3>Comments ({{ ticket.comments|length }})</h3>
+                {% for comment in ticket.comments %}
+                    <div class="comment-item">
+                        <p>**{{ comment.author }}** @ {{ comment.createdAt|date('H:i') }}:</p>
+                        <p>{{ comment.content }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+        
+    </div>
+{% endblock %}

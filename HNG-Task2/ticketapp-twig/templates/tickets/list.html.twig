@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}All Tickets{% endblock %}
+
+{% block body %}
+    <h2>Open Tickets</h2>
+
+    {% if tickets is empty %}
+        <p>No open tickets found. Create a new one!</p>
+    {% else %}
+        <div class="ticket-list">
+            {# Loop through the tickets array passed from the PHP controller #}
+            {% for ticket in tickets %}
+                <div class="ticket-item" onclick="window.location='{{ path('ticket_detail', {id: ticket.id}) }}'">
+                    
+                    {# Display main ticket information #}
+                    <div class="ticket-title">
+                        Ticket #{{ ticket.id }}: **{{ ticket.title }}**
+                    </div>
+                    
+                    {# Display status and date/time #}
+                    <div class="ticket-meta">
+                        <span class="status-badge status-{{ ticket.status|lower }}">{{ ticket.status }}</span>
+                        <span class="date">{{ ticket.createdAt|date('M d, Y H:i') }}</span>
+                    </div>
+                    
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+{% endblock %}
