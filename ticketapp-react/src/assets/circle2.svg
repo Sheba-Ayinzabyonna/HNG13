@@ -1,0 +1,10 @@
+<!-- circle-red.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150">
+  <defs>
+    <radialGradient id="r" cx="50%" cy="40%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.28"></stop>
+      <stop offset="100%" stop-color="#ff6347" stop-opacity="0.12"></stop>
+    </radialGradient>
+  </defs>
+  <circle cx="75" cy="75" r="75" fill="url(#r)"></circle>
+</svg>
