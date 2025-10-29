@@ -1,0 +1,15 @@
+# Sets the Node.js version used during the build process
+[build.environment]
+NODE_VERSION = "22"
+
+# Specifies the build command and the directory where the optimized files are located
+[build]
+  command = "npm run build"
+  publish = "dist" # The output folder created by Vite/Vue CLI
+
+# This is the crucial fallback routing rule for Single Page Applications (SPAs)
+# It ensures that all paths route back to index.html to let Vue Router handle the navigation.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
